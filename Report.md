@@ -8,7 +8,7 @@ they do it.
 In this project, your goal will be to use data from accelerometers on the belt, forearm, arm, and dumbell of 6 
 participants. They were asked to perform barbell lifts correctly and incorrectly in 5 different ways. 
 
-###Install the Libraries
+### Install the Libraries
 ```r
 library(caret)
 library(rpart)
@@ -16,7 +16,7 @@ library(rpart.plot)
 library(randomForest)
 library(corrplot)
 ```
-###Download the Data
+### Download the Data
 ```r
 The training data for this project are available here:
 https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv
@@ -63,7 +63,7 @@ trainData <- trainCleaned[inTrain, ]
 testData <- trainCleaned[-inTrain, ]
 ```
 
-###Data Modeling
+### Data Modeling
 Using Random Forest algorithm because it automatically selects important variables.Use 5-fold cross validation when applying the 
 algorithm.
 ```r
@@ -125,7 +125,7 @@ Estimate the performance of the model on the validation data set.
 ## Detection Prevalence   0.2845   0.1935   0.1743   0.1638   0.1839
 ## Balanced Accuracy      0.9983   0.9981   0.9902   0.9927   0.9979
 ```
-Check the Accuracy
+### Check the Accuracy
 ```r
 accuracy <- postResample(predictRf, testData$classe)
 accuracy
